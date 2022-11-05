@@ -3,20 +3,6 @@
 
     import Link from "../components/Link.svelte"
     import GradientCard from "../components/GradientCard.svelte";
-
-    
-        if (typeof window !== 'undefined') {
-            // const canvas = document.getElementById('bg')
-            // /** @type {CanvasRenderingContext2D} */
-            // const ctx = canvas?.getContext('2d')
-    
-            // const r = document.querySelector(':root')
-            // const colors = [0xff0000, 0x00ff00, 0x0000ff]
-    
-        }
-
-        const cl = () => {
-        }
 </script>
 
 <div class="square-container">
@@ -63,8 +49,8 @@
         place-items: center;
         width: 100%;
         animation-name: square-anim;
-        animation-duration: 0.5s;
-        animation-timing-function: ease-out;
+        animation-duration: 0.4s;
+        animation-timing-function: cubic-bezier(.17,.67,.38,.96);
     }
 </style>
 
