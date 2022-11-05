@@ -1,12 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" href="%sveltekit.assets%/favicon.png" />
-		<meta name="viewport" content="width=device-width" />
-		%sveltekit.head%
-	</head>
-	<body>
-		<div>%sveltekit.body%</div>
-	</body>
+    <head>
+        <meta charset="utf-8" />
+        <link rel="icon" href="%sveltekit.assets%/favicon.png" />
+        <meta name="viewport" content="width=device-width" />
+        %sveltekit.head%
+        <style>
+            .main-container {
+                display: flex;
+                flex-direction: column;
+                z-index: -999;
+            }
+
+            @media screen and (min-width: 480px) {
+                .main-container {
+                    display: flex;
+                    flex-direction: row;
+                    /* width: calc(100vw - 8rem); */
+                    width: 100vw;
+                    z-index: -999;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="main-container">%sveltekit.body%</div>
+    </body>
 </html>

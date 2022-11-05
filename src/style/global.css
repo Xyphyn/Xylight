@@ -1,0 +1,58 @@
+@font-face {
+    font-family: 'Didact Gothic';
+    src: url('/font.ttf');
+}
+
+:root {
+    /* --text-color: 255, 255, 255;
+    --background-color: 20, 20, 20; */
+    --text-color: 20, 20, 20;
+    --background-color: 240, 240, 240;
+    --background-highlight: 200, 200, 200;
+    --shadow: 20, 25, 20;
+    --highlight: 90, 57, 246;
+    --highlight-two: 211, 0, 255;
+    --link-inactive: 255, 255, 255;
+    font-family: 'Didact Gothic';
+    font-size: 1.3rem;
+}
+@property --accent {
+    syntax: '<number>';
+    initial-value: #ff0000;
+}
+body,
+html {
+    margin: 0px;
+    padding: 0px;
+}
+
+h1,
+p {
+    margin: 0;
+}
+
+html {
+    color: rgb(var(--text-color));
+    background-color: rgb(var(--background-color));
+    transition-property: color background-color;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-in-out;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+#nprogress .bar {
+    background: linear-gradient(
+        90deg,
+        rgb(var(--highlight)) 0%,
+        rgb(var(--highlight-two)) 100%
+    ) !important;
+    height: 4px !important;
+}
+
+#nprogress .peg {
+    box-shadow: 0 0 10px rgb(var(--highlight)), 0 0 5px rgb(var(--highlight)) !important;
+}
