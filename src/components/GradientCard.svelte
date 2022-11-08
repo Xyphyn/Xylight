@@ -30,8 +30,10 @@
         height: min-content;
         border-radius: 0.8rem;
         box-shadow: 1px 1px 24px -3px rgba(186, 12, 253, 0.7);
-        display: grid;
-        place-items: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
         transition: all 0.5s ease-in-out;
     }
 </style>

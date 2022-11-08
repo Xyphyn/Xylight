@@ -39,6 +39,7 @@
         display: grid;
         place-items: center;
         width: 100%;
+        height: 100%;
         animation-name: square-anim;
         animation-duration: 0.4s;
         animation-timing-function: cubic-bezier(0.17, 0.67, 0.38, 0.96);

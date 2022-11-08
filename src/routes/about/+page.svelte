@@ -12,32 +12,56 @@
         </p>
     </GradientCard>
     <GradientCard>
-        <h1>Skills</h1>
+        <h2>Skills</h2>
         <div class="bar-container">
-            <p>Web Design</p>
+            <p class="label">HTML/CSS</p>
             <ProgressBar progress={50} />
         </div>
+        <div class="bar-container">
+        	<p class="label">JavaScript</p>
+        	<ProgressBar progress={85} />
+        </div>
+        <div class="bar-container">
+			<p class="label">Java</p>
+			<ProgressBar progress={70} />
+        </div>
+        <div class="bar-container">
+        	<p class="label">Kotlin</p>
+        	<ProgressBar progress={30} />
+        </div>
+    </GradientCard>
+    <GradientCard>
+    	<p>
+             This website is nowhere near finished. It will be updated soon with more info!
+    	</p>
     </GradientCard>
 </div>
 
 <style>
+	
     .bar-container {
         display: flex;
-        justify-content: center;
+        justify-content: space-between;
         align-items: center;
-        width: 100%;
+        width: 90%;
+        padding-top: 0.25rem;
+        padding-bottom: 0.25rem;
+        margin-left: 1rem;
+        margin-right: 1rem;
     }
 
     .container {
         display: grid;
         place-items: center;
         width: 100%;
+        height: 100%;
         animation-name: square-anim;
         animation-duration: 0.4s;
         animation-timing-function: cubic-bezier(0.17, 0.67, 0.38, 0.96);
+        gap: 1rem;
     }
 
-    p {
+    p:not(.label) {
         margin: 2rem;
     }
 </style>
