@@ -50,9 +50,20 @@ a {
         rgb(var(--highlight)) 0%,
         rgb(var(--highlight-two)) 100%
     ) !important;
-    height: 4px !important;
+    height: 3px !important;
 }
 
 #nprogress .peg {
-    box-shadow: 0 0 10px rgb(var(--highlight)), 0 0 5px rgb(var(--highlight)) !important;
+    box-shadow: 0 0 0px rgb(var(--highlight)), 0 0 0px rgb(var(--highlight)) !important;
+}
+
+@keyframes square-anim {
+    0% {
+        opacity: 0%;
+        transform: translateY(-5%);
+    }
+    100% {
+        opacity: 100%;
+        transform: translateY(0%);
+    }
 }
