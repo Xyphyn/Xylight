@@ -71,7 +71,7 @@
         height: 60vw;
         border-radius: 1rem;
         transition: all cubic-bezier(0.17, 0.67, 0.38, 0.96) 0.3s;
-        transform: perspective(75em) rotateY(30deg);
+        transform: perspective(60rem) rotateY(30deg);
 
         box-shadow: rgba(var(--shadow), 0.65) 0px 60px 123px -25px,
             rgba(19, 26, 32, 0.08) 0px 35px 75px -35px;
@@ -156,7 +156,7 @@
         animation-timing-function: cubic-bezier(0.17, 0.67, 0.38, 0.96);
     }
 
-    @media screen and (min-width: 480px) {
+    @media screen and (min-width: 640px) {
         .container > div:nth-child(1) {
             position: relative;
             left: 10rem;
@@ -168,7 +168,7 @@
         }
 
         .container {
-            grid-template-columns: repeat(3, 30vw);
+            grid-template-columns: repeat(3, 33%);
             grid-template-rows: none;
         }
     }

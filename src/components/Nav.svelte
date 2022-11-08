@@ -45,9 +45,10 @@
         margin-top: 1rem;
         margin-bottom: 1rem;
         width: 100vw;
+        z-index: 9999;
     }
 
-    @media screen and (min-width: 480px) {
+    @media screen and (min-width: 640px) {
         .nav-container {
             flex-direction: column;
             height: 100vh;
@@ -57,6 +58,7 @@
             margin-bottom: 0rem;
             align-items: flex-start;
             width: 8rem;
+            position: fixed;
         }
     }
 

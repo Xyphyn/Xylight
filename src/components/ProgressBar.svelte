@@ -3,11 +3,10 @@
     export let progress = 1
 </script>
 
-
 <div class="progressbar-bg">
     <div class="progressbar-fg" style="width: {progress}%;" />
-	
 </div>
+
 <style>
     .progressbar-bg {
         background-color: rgba(var(--text-color), 0.35);
@@ -19,11 +18,6 @@
         display: inherit;
         align-items: inherit;
         justify-content: inherit;
-        
-	}
-
-    .percentage {
-    	
     }
 
     .progressbar-fg {
