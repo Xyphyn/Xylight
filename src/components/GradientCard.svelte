@@ -18,10 +18,11 @@
     .gradient-card {
         background: linear-gradient(
             100deg,
-            rgba(90, 57, 246, 1) 0%,
-            rgba(211, 0, 255, 1) 59%,
-            rgb(250, 29, 165) 88%
+            rgba(var(--c1, 90, 57, 246), var(--opacity, 1)) 0%,
+            rgba(var(--c2, 211, 0, 255), var(--opacity, 1)) 59%,
+            rgba(var(--c3, 250, 29, 165), var(--opacity, 1)) 88%
         );
+        backdrop-filter: blur(24px);
         background-size: 400% 400%;
         animation: gradient 10s ease infinite;
         max-width: 24rem;
@@ -29,11 +30,12 @@
         width: 80vw;
         height: min-content;
         border-radius: 0.8rem;
-        box-shadow: 1px 1px 24px -3px rgba(186, 12, 253, 0.7);
+        box-shadow: 1px 1px 24px -3px rgba(var(--c2, 211, 0, 255), 0.7);
         display: flex;
         align-items: center;
         justify-content: center;
         flex-direction: column;
         transition: all 0.5s ease-in-out;
+        color: rgb(var(--text-color));
     }
 </style>

@@ -7,12 +7,11 @@
     /**
      * @type {string}
      */
-    let clazz = ''
-    export { clazz as class }
+    let style = ''
     export let onclick = () => {}
 </script>
 
-<a {href} class={`link ${clazz || ''}`} on:click={onclick}><slot /></a>
+<a {href} {style} class="link" on:click={onclick}><slot /></a>
 
 <style>
     .link {
