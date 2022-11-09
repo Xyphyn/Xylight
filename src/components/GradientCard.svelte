@@ -29,6 +29,7 @@
         min-height: 14rem;
         width: 80vw;
         height: min-content;
+        border: 2px solid rgba(var(--text-color), 0.5);
         border-radius: 0.8rem;
         box-shadow: 1px 1px 24px -3px rgba(var(--c2, 211, 0, 255), 0.7);
         display: flex;
