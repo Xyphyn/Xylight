@@ -7,7 +7,7 @@
     /**
      * @type {string}
      */
-    let style = ''
+    export let style = ''
     export let onclick = () => {}
 </script>
 
@@ -15,7 +15,6 @@
 
 <style>
     .link {
-        text-transform: uppercase;
         transition: all 150ms;
         padding: 0.5rem;
         padding-right: 0.65rem;

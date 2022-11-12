@@ -13,7 +13,7 @@
     --highlight: 90, 57, 246;
     --highlight-two: 211, 0, 255;
     --link-inactive: 255, 255, 255;
-    font-family: 'Didact Gothic';
+    font-family: 'Didact Gothic', sans-serif;
     font-size: 1.3rem;
 }
 @property --accent {

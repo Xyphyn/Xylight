@@ -1,4 +1,8 @@
-<div class="gradient-card">
+<script>
+    export let style = ''
+</script>
+
+<div {style} class="gradient-card">
     <slot />
 </div>
 

@@ -2,10 +2,11 @@
     import Link from '../../components/Link.svelte'
 </script>
 
+<title>Projects</title>
 <div class="container">
     <div class="card neptune-card">
         <h1 class="card-title">
-            <a class="" href="https://github.com/Xyphyn/Neptune">Neptune</a>
+            <Link href="https://github.com/Xyphyn/Neptune">Neptune</Link>
         </h1>
         <p>
             <img
@@ -21,13 +22,22 @@
         </p>
     </div>
     <div class="card xymc-card">
-        <h1 class="card-title">XyMC</h1>
+        <h1 class="card-title">
+            <Link href="https://github.com/Xyphyn/XyPVP" style="color: inherit;"
+                >XyPVP</Link
+            >
+        </h1>
         <p>
             <img src="/content/java.png" class="icon" alt="Java Logo" />
         </p>
     </div>
     <div class="card website-card">
-        <h1 class="card-title">This website</h1>
+        <h1 class="card-title">
+            <Link
+                href="https://github.com/Xyphyn/Xylight"
+                style="color: inherit;">This website</Link
+            >
+        </h1>
         <p>
             <img src="/content/svelte.png" class="icon" alt="Svelte Logo" />
 
@@ -40,7 +50,7 @@
     </div>
 </div>
 
-<style lang="scss">
+<style>
     .icon {
         max-width: 2rem;
         max-height: 2rem;
@@ -73,8 +83,7 @@
         transition: all cubic-bezier(0.17, 0.67, 0.38, 0.96) 0.3s;
         transform: perspective(60rem) rotateY(30deg);
 
-        box-shadow: rgba(var(--shadow), 0.65) 0px 60px 123px -25px,
-            rgba(19, 26, 32, 0.08) 0px 35px 75px -35px;
+        box-shadow: rgba(var(--shadow), 0.65) 0px 0px 43px -12px;
     }
 
     .card:hover {

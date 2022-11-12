@@ -1,8 +1,11 @@
 <script>
     import GradientCard from '../../components/GradientCard.svelte'
     import ProgressBar from '../../components/ProgressBar.svelte'
+    import Fa from 'svelte-fa/src/fa.svelte'
+    import { faGithub } from '@fortawesome/free-brands-svg-icons/faGithub'
 </script>
 
+<title>About</title>
 <div class="container">
     <GradientCard --text-color="255, 255, 255">
         <img src="/content/HTML.png" alt="The HTML logo" class="logo" />
@@ -11,6 +14,9 @@
             I make things in Java, TypeScript, and more, and I'm currently learning
             Kotlin.
         </p>
+        <div class="socials">
+            <Fa icon={faGithub} />
+        </div>
     </GradientCard>
     <GradientCard --text-color="255, 255, 255">
         <h2>Skills</h2>
@@ -58,6 +64,9 @@
 </div>
 
 <style>
+    .socials {
+        font-size: 64px;
+    }
     .logo {
         width: 4rem;
         height: auto;
@@ -80,14 +89,20 @@
     .container {
         display: grid;
         place-items: center;
+        grid-auto-rows: minmax(min-content, max-content);
+        gap: 1rem;
         width: 100%;
         height: 100%;
-        gap: 2rem;
-        margin-top: 1rem;
-        margin-bottom: 1rem;
         animation-name: square-anim;
         animation-duration: 0.4s;
         animation-timing-function: cubic-bezier(0.17, 0.67, 0.38, 0.96);
+    }
+
+    @media screen and (min-width: 640px) {
+        .container {
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+        }
     }
 
     p:not(.label) {

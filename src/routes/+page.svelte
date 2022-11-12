@@ -1,10 +1,9 @@
-<script lang="javascript">
-    // @ts-nocheck
-
+<script>
     import Link from '../components/Link.svelte'
     import GradientCard from '../components/GradientCard.svelte'
 </script>
 
+<title>Xylight</title>
 <div class="container background">
     <GradientCard
         --opacity={0.55}
