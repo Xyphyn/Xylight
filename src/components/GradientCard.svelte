@@ -37,9 +37,9 @@
         border-radius: 0.8rem;
         box-shadow: 1px 1px 24px -3px rgba(var(--c2, 211, 0, 255), 0.7);
         display: flex;
+        flex-direction: column;
         align-items: center;
         justify-content: center;
-        flex-direction: column;
         transition: all 0.5s ease-in-out;
         color: rgb(var(--text-color));
     }

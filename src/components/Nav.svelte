@@ -3,29 +3,22 @@
     import Link from './Link.svelte'
     import Fa from 'svelte-fa/src/fa.svelte'
     import { faMoon } from '@fortawesome/free-solid-svg-icons/faMoon'
+    import { theme } from '../stores'
+
+    const toggleDarkTheme = () => {
+        if ($theme == 'light') {
+            theme.set('dark')
+        } else {
+            theme.set('light')
+        }
+    }
 </script>
 
 <nav class="nav-container">
     <Link href="/">HOME</Link>
     <Link href="/projects">PROJECTS</Link>
     <Link href="/about">ABOUT</Link>
-    <Link
-        onclick={() => {
-            const r = document.querySelector(':root')
-            const rs = getComputedStyle(r)
-            const txt = rs.getPropertyValue('--text-color')
-            const bg = rs.getPropertyValue('--background-color')
-            const shadow = rs.getPropertyValue('--shadow')
-            if (shadow == '20, 25, 20') {
-                r.style.setProperty('--shadow', '0, 0, 0')
-            } else {
-                r.style.setProperty('--shadow', '20, 25, 20')
-            }
-            r.style.setProperty('--text-color', bg)
-            r.style.setProperty('--background-color', txt)
-        }}
-        class=""
-    >
+    <Link onclick={toggleDarkTheme} class="">
         <Fa icon={faMoon} style="width: 1rem; height: 1rem;" />
     </Link>
 </nav>

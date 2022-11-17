@@ -7,14 +7,18 @@
 
 <title>About</title>
 <div class="container">
-    <GradientCard --text-color="255, 255, 255">
-        <img src="/content/HTML.png" alt="The HTML logo" class="logo" />
+    <GradientCard --text-color="255, 255, 255" style="">
+        <img
+            src="/content/HTML.png"
+            alt="The HTML logo"
+            class="logo card-item"
+        />
         <p>
             I'm James, a developer.<br />
             I make things in Java, TypeScript, and more, and I'm currently learning
             Kotlin.
         </p>
-        <div class="socials">
+        <div class="socials card-item">
             <Fa icon={faGithub} />
         </div>
     </GradientCard>
@@ -67,6 +71,11 @@
     .socials {
         font-size: 64px;
     }
+
+    .card-item {
+        margin: 1rem;
+    }
+
     .logo {
         width: 4rem;
         height: auto;
