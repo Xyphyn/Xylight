@@ -15,7 +15,7 @@
             const rs = getComputedStyle(r)
             if ($theme == 'light') {
                 r.style.setProperty('--text-color', '20, 20, 20')
-                r.style.setProperty('--background-color', '255, 255, 255')
+                r.style.setProperty('--background-color', '240, 240, 240')
                 r.style.setProperty('--shadow', '25, 25, 25')
             } else {
                 r.style.setProperty('--text-color', '255, 255, 255')

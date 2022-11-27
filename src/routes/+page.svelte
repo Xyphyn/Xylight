@@ -12,7 +12,7 @@
         --c3="140, 3, 252"
         --text-color="255, 255, 255"
     >
-        <h1>Hi! 👋</h1>
+        <h1 class="centered">Hi! 👋</h1>
         <p class="type">
             I'm James. I develop primarily in Java and JavaScript, and I'm
             learning new languages such as Kotlin. You can see what I've made <Link
@@ -22,7 +22,7 @@
     </GradientCard>
 </div>
 
-<style lang="scss">
+<style>
     p {
         padding-left: 2rem;
         padding-right: 2rem;
@@ -39,6 +39,10 @@
         100% {
             background-position: 0% 50%;
         }
+    }
+
+    .centered {
+        align-self: center;
     }
 
     .container {

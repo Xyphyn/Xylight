@@ -11,14 +11,14 @@
         <img
             src="/content/HTML.png"
             alt="The HTML logo"
-            class="logo card-item"
+            class="logo card-item centered"
         />
         <p>
             I'm James, a developer.<br />
             I make things in Java, TypeScript, and more, and I'm currently learning
             Kotlin.
         </p>
-        <div class="socials card-item">
+        <div class="socials card-item centered">
             <Fa icon={faGithub} />
         </div>
     </GradientCard>
@@ -68,6 +68,14 @@
 </div>
 
 <style>
+    h2 {
+        padding-left: 1rem;
+    }
+
+    .centered {
+        align-self: center;
+    }
+
     .socials {
         font-size: 64px;
     }
