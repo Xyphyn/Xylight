@@ -7,14 +7,15 @@ export async function GET({ params }) {
     const { data, error } = await supabase
         .from('blogposts')
         .select('*')
-        .eq('title', params.slug)
+        .order('id', { ascending: false })
+        .limit(10)
 
     if (error) {
         console.log(error)
     }
 
-    if (data[0]) {
-        return new Response(JSON.stringify(data[0]))
+    if (data) {
+        return new Response(JSON.stringify(data))
     } else {
         throw svelteError(404, 'Not found')
     }
