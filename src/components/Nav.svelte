@@ -19,7 +19,7 @@
     <Link href="/projects">PROJECTS</Link>
     <Link href="/about">ABOUT</Link>
     <Link href="/blog">BLOG</Link>
-    <Link onclick={toggleDarkTheme} class="">
+    <Link onclick={toggleDarkTheme} href="">
         <Fa icon={faMoon} style="width: 1rem; height: 1rem;" />
     </Link>
 </nav>
