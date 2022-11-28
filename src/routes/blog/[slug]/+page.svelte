@@ -1,20 +1,26 @@
 <script lang="ts">
-    import GradientCard from '../../../components/GradientCard.svelte'
     import SvelteMarkdown from 'svelte-markdown'
-    import LoadingCard from '../../../components/LoadingCard.svelte'
-    import BackgroundCard from '../../../components/BackgroundCard.svelte'
-    import SimpleLink from '../../../components/SimpleLink.svelte'
-    import PrettyDate from '../../../components/PrettyDate.svelte'
+    import LoadingCard from '$comp/LoadingCard.svelte'
+    import BackgroundCard from '$comp/BackgroundCard.svelte'
+    import SimpleLink from '$comp/SimpleLink.svelte'
+    import PrettyDate from '$comp/PrettyDate.svelte'
 
-    export let data: any
-    async function fetchPost() {
-        const response = await self.fetch(`/api/blog/${data.id}`)
-        if (response.ok) {
-            return response.json()
-        }
+    interface Post {
+        id: number
+        created_at: string
+        content: string
+        title: string
+        description: string
+        author: string
     }
 
-    let promise = Promise.resolve([])
+    export let data: any
+    async function fetchPost(): Promise<Post> {
+        const response = await self.fetch(`/api/blog/${data.id}`)
+        return response.json()
+    }
+
+    let promise: Promise<Post> | undefined
     promise = fetchPost()
 </script>
 
@@ -25,13 +31,13 @@
         <BackgroundCard --text-color="255, 255, 255">
             <div class="content">
                 <SvelteMarkdown
-                    source={post.content}
+                    source={post?.content}
                     renderers={{ link: SimpleLink }}
                 />
             </div>
             <hr />
             <p class="footer">
-                <PrettyDate unformattedDate={post.created_at} />
+                <PrettyDate unformattedDate={post?.created_at} /> • {post?.author}
             </p>
         </BackgroundCard>
     {:catch error}
@@ -74,6 +80,7 @@
 
     .content {
         padding: 1rem;
+        overflow: scroll;
     }
 
     .centered {

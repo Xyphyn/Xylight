@@ -1,7 +1,8 @@
 <script>
-    import LoadingCard from '../../components/LoadingCard.svelte'
-    import GradientCard from '../../components/GradientCard.svelte'
-    import PrettyDate from '../../components/PrettyDate.svelte'
+    // @ts-nocheck
+    import LoadingCard from '$comp/LoadingCard.svelte'
+    import GradientCard from '$comp/GradientCard.svelte'
+    import PrettyDate from '$comp/PrettyDate.svelte'
     import { goto } from '$app/navigation'
     async function fetchPost() {
         const response = await self.fetch(`/api/blog/posts`)

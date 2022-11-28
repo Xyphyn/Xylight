@@ -1,6 +1,6 @@
 <script>
-    import Link from '../components/Link.svelte'
-    import GradientCard from '../components/GradientCard.svelte'
+    import Link from '$comp/Link.svelte'
+    import GradientCard from '$comp/GradientCard.svelte'
 </script>
 
 <title>Xylight</title>
@@ -16,7 +16,8 @@
         <p class="type">
             I'm James. I develop primarily in Java and JavaScript, and I'm
             learning new languages such as Kotlin. You can see what I've made <Link
-                href="/projects">here.</Link
+                href="/projects"
+                --background-color="0, 0, 0">here.</Link
             >
         </p>
     </GradientCard>

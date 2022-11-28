@@ -21,9 +21,6 @@
 
     .gradient-card {
         align-self: center;
-    }
-
-    .gradient-card {
         background: linear-gradient(
             100deg,
             rgba(var(--c1, 90, 57, 246), var(--opacity, 1)) 0%,

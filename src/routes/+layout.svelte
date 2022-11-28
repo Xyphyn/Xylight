@@ -1,13 +1,24 @@
 <script>
     // @ts-nocheck
 
-    import Link from '../components/Link.svelte'
     import Nav from '../components/Nav.svelte'
     import '../style/global.css'
     import NProgress from 'nprogress'
     import 'nprogress/nprogress.css'
     import { navigating } from '$app/stores'
     import { theme } from '../stores'
+
+    // onMount(() => {
+    //     const {
+    //         data: { subscription }
+    //     } = supabase.auth.onAuthStateChange(() => {
+    //         invalidate('supabase:auth')
+    //     })
+
+    //     return () => {
+    //         subscription.unsubscribe()
+    //     }
+    // })
 
     theme.subscribe(() => {
         if (typeof window != 'undefined') {

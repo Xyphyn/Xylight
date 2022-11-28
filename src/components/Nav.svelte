@@ -1,5 +1,4 @@
-<script>
-    // @ts-nocheck
+<script lang="ts">
     import Link from './Link.svelte'
     import Fa from 'svelte-fa/src/fa.svelte'
     import { faMoon } from '@fortawesome/free-solid-svg-icons/faMoon'

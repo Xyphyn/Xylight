@@ -32,8 +32,10 @@ p {
 }
 
 code {
+    display: inline-block;
     background-color: rgba(0, 0, 0, 0.3);
-    padding: 8px;
+    padding: 0.5rem;
+    width: max-content;
     border-radius: 4px;
     font-size: 12px;
 }
