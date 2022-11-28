@@ -31,7 +31,7 @@
                     <p>{post.description}</p>
                     <hr />
                     <p class="date">
-                        <PrettyDate unformattedDate={post.created_at} />
+                        <PrettyDate unformattedDate={post.created_at} /> • {post?.author}
                     </p>
                 </div>
             </GradientCard>

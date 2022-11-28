@@ -6,7 +6,7 @@ import { error as svelteError } from '@sveltejs/kit'
 export async function GET({ params }) {
     const { data, error } = await supabase
         .from('blogposts')
-        .select('*')
+        .select('created_at,title,description,author')
         .order('id', { ascending: false })
         .limit(10)
 
