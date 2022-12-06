@@ -6,7 +6,7 @@
 <div class="container">
     <div class="card neptune-card">
         <h1 class="card-title">
-            <Link href="https://github.com/Xyphyn/Neptune">Neptune</Link>
+            <Link href="/neptune">Neptune</Link>
         </h1>
         <p>
             <img
